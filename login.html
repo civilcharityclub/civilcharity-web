@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Design by prince-lacky -->
+  <title>Glassmorphism login Form Tutorial in html css</title>
+ 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="css/login.css">
+  <script src="/JAVASCRIPT/civil.js"></script>
+  <!--Stylesheet-->
+  <style media="screen">
+
+  </style>
+</head>
+<body>
+  <i class="fa fa-user-circle-o fa-3" aria-hidden="true"></i>
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+  <form onsubmit="return validateForm()">
+    <h5 class="h5">Welcome back user to civil charity club.</h5>
+    <h3>Login Here</h3>
+
+    <label for="username">Username</label>
+    <input type="text" placeholder="Email or Phone" id="username">
+
+    <label for="password">Password</label>
+    <input type="password" placeholder="Password" id="password">
+
+    <div class="buttons">
+      <button type="submit" class="login">Log In</button>
+      <button class="signup">Sign up</button>
+    </div>
+    <div class="social">
+      <div class="insta"><i class="fab fa-google"></i>  Instagram</div>
+      <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+    </div>
+  </form>
+
+  <script>
+    function loginUser() {
+      // Get the username and password input fields
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+    function validateForm() {
+      // Get form inputs
+      var username = document.getElementById("username").value.trim();
+      var password = document.getElementById("password").value.trim();
+
+      // Check if inputs are empty
+      if (username === "" || password === "") {
+        alert("Please enter both username and password.");
+        return false;
+      }
+
+      // Add more validation rules here as needed
+
+      // If all validation passes, return true to submit form
+      return true;
+    }
+
+    if (username === "validUsername" && password === "validPassword") {
+      window.location.href = "user.html";
+      return false; // Prevent the form from submitting normally
+    }
+    else {
+      alert("Invalid username or password.");
+      return false; // Prevent the form from submitting normally
+    }
+  }
+  </script>
+</body>
+</html>

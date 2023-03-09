@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donation Page</title>
+  <link rel="stylesheet" href="/CSS/donate.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Make a Donation</h1>
+    <form id="donation-form" action="#" method="post">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" min="1" step="0.01" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Mobile Money Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[+][0-9]{12}" placeholder="+255693813456" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" id="submit-button">Donate</button>
+      </div>
+    </form>
+    <div id="success-message" class="message">Thank you for your donation!</div>
+    <div id="error-message" class="message">There was an error processing your donation. Please try again.</div>
+  </div>
+  <script src="/JAVASCRIPT/donate.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.slides{
+  display: flex;
+  width:500px;
+  min-width: 499px;
+  max-height: 400px;
+
+}
+.slides img{
+  width:500px;
+  height:150px;
+
+}
+  
